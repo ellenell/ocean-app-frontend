@@ -6,16 +6,19 @@ import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 
 // Import pages
-import Home from './pages/Home.js'
 import DailyWeather from './pages/DailyWeather.js'
+import WeeklyWeather from './pages/WeeklyWeather.js'
 
 
 function App() {
+  // const URL = URL TO BE ADDED 
+
   return (
     <div className="App">
       < Header />
       < Home /> 
       < DailyWeather />
+      < WeeklyWeather />
       < Footer />
     </div>
   );
