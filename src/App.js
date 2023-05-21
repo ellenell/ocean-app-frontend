@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 // Import components
@@ -6,8 +7,9 @@ import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 
 // Import pages
-import DailyWeather from './pages/DailyWeather.js'
-import WeeklyWeather from './pages/WeeklyWeather.js'
+import DailyWeather from './pages/DailyWeather.js';
+import WeeklyWeather from './pages/WeeklyWeather.js';
+import HomePage from './pages/HomePage.js'
 
 
 function App() {
@@ -16,9 +18,11 @@ function App() {
   return (
     <div className="App">
       < Header />
-      < Home /> 
-      < DailyWeather />
-      < WeeklyWeather />
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/daily-weather" element={<DailyWeather />} />
+        <Route path="/weekly-weather" element={<WeeklyWeather />} />
+      </Routes> 
       < Footer />
     </div>
   );
