@@ -18,11 +18,12 @@ function App() {
   return (
     <div className="App">
       < Header />
-      <Routes>
+      < DailyWeather />
+      {/* <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/daily-weather" element={<DailyWeather />} />
         <Route path="/weekly-weather" element={<WeeklyWeather />} />
-      </Routes> 
+      </Routes>  */}
       < Footer />
     </div>
   );

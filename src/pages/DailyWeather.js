@@ -31,6 +31,12 @@ const DailyWeather = () => {
       }
     }
 
+    const getCurrentDate = () => {
+      const date = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      return date.toLocaleDateString(undefined, options);
+    };
+
 //  useEffect(() => {
 //   const fetchWeatherData = async () => {
 //     const options = {
@@ -44,7 +50,7 @@ const DailyWeather = () => {
   return (
     <div className="Header">
       <div className ="Weatherform">
-
+      <h1>Todays Weather</h1>
         <form onSubmit={submitLocation}>
           <input
             type="text"
@@ -57,9 +63,13 @@ const DailyWeather = () => {
         {weatherData && (
         <div>
           <h2>Weather in {weatherData.name}</h2>
-          <p>Temperature: {Math.round(weatherData.main.temp)}° F</p>
-          <p>Description: {weatherData.weather[0].description}</p>
-        </div>
+          <p>{getCurrentDate()}</p>
+          <p>Temperature: {Math.round(weatherData.main.temp)}°F</p>
+          <p>Feels Like: {Math.round(weatherData.main.feels_like)}°F</p>
+            <p>Min Temperature: {Math.round(weatherData.main.temp_min)}°F</p>
+            <p>Max Temperature: {Math.round(weatherData.main.temp_max)}°F</p>
+
+          </div>
       )}
     </div>
 
