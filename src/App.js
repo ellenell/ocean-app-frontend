@@ -10,6 +10,8 @@ import Footer from './components/Footer.js'
 import DailyWeather from './pages/DailyWeather.js';
 import WeeklyWeather from './pages/WeeklyWeather.js';
 import HomePage from './pages/HomePage.js'
+import SurfingWeather from './pages/SurfingWeather.js'
+import KayakingWeather from './pages/KayakingWeather.js'
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
   return (
     <div className="App">
       < Header />
+      < KayakingWeather />
       < DailyWeather />
       {/* <Routes>
         <Route path="/" element={<HomePage />} />
