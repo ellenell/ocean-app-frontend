@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 // Import components
@@ -15,23 +15,24 @@ import KayakingWeather from './pages/KayakingWeather.js'
 
 
 function App() {
-  // const URL = URL TO BE ADDED 
+  const URL = `http://localhost:4000/`
 
   return (
-    <div className="App">
-      < Header />
-      < WeeklyWeather />
-      < KayakingWeather />
-      < SurfingWeather />
-      < DailyWeather />
-      {/* <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/daily-weather" element={<DailyWeather />} />
-        <Route path="/weekly-weather" element={<WeeklyWeather />} />
-      </Routes>  */}
-      < Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/daily-weather" element={<DailyWeather />} />
+          <Route path="/weekly-weather" element={<WeeklyWeather />} />
+          <Route path="/surfing-weather" element={<SurfingWeather />} />
+          <Route path="/kayaking-weather" element={<KayakingWeather />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
+
 
 export default App;
