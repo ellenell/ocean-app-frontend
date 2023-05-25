@@ -30,6 +30,7 @@ const DailyWeather = () => {
 
   return (
     <div className="Header">
+      <h2>Today's Weather</h2>
       <div className="Weatherform">
         <form onSubmit={submitLocation}>
           <input
@@ -42,7 +43,7 @@ const DailyWeather = () => {
         </form>
         {weatherData && (
           <div>
-            <h2>Weather in {weatherData.name}</h2>
+            <h2>{weatherData.name} Weather is: </h2>
             <p>Temperature: {Math.round(weatherData.main.temp)}°F</p>
             <p>Feels Like: {Math.round(weatherData.main.feels_like)}°F</p>
             <p>Min Temperature: {Math.round(weatherData.main.temp_min)}°F</p>

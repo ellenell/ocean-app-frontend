@@ -20,7 +20,9 @@ function App() {
   return (
     <div className="App">
       < Header />
+      < WeeklyWeather />
       < KayakingWeather />
+      < SurfingWeather />
       < DailyWeather />
       {/* <Routes>
         <Route path="/" element={<HomePage />} />
