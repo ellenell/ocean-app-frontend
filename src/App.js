@@ -13,6 +13,10 @@ import HomePage from './pages/HomePage.js'
 import SurfingWeather from './pages/SurfingWeather.js'
 import KayakingWeather from './pages/KayakingWeather.js'
 import SnorkelWeather from './pages/SnorkelWeather.js'
+import SailingWeather from './pages/SailingWeather.js';
+
+// Import user pages
+import SignIn from './pages/User Pages/SignIn.js';
 
 
 function App() {
@@ -29,6 +33,8 @@ function App() {
           <Route path="/surfing-weather" element={<SurfingWeather />} />
           <Route path="/kayaking-weather" element={<KayakingWeather />} />
           <Route path="/snorkel-weather" element={<SnorkelWeather />} />
+          <Route path="/sailing-weather" element={<SailingWeather />} />
+          <Route path="/signin" element={<SignIn />} />
         </Routes>
         <Footer />
       </div>
