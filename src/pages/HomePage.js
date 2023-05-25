@@ -19,17 +19,21 @@ function HomePage() {
     <div className="homepage">
       <div style={mainDivStyle}>
         <h2>OCEAN TIME?</h2>
+        <p>Is it safe to do the following activities in the ocean today?</p>
         <Link to="/kayaking-weather">
-          <button style={buttonStyle}>Can I go kayaking today?</button>
+          <button style={buttonStyle}>KAYAKING?</button>
         </Link>
         <Link to="/surfing-weather">
-          <button style={buttonStyle}>Can I go surfing today?</button>
+          <button style={buttonStyle}>SURFING?</button>
+        </Link>
+        <Link to="/snorkel-weather">
+          <button style={buttonStyle}>SNORKELING</button>
         </Link>
         <Link to="/daily-weather">
-          <button style={buttonStyle}>What is today's overall weather?</button>
+          <button style={buttonStyle}>TODAY'S OVERALL FORECAST</button>
           </Link>
           <Link to="/weekly-weather">
-          <button style={buttonStyle}>What is the weather forecast this week?</button>
+          <button style={buttonStyle}>WEEKLY FORECAST</button>
         </Link>
       </div>
     </div>

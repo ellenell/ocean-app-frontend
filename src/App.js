@@ -12,6 +12,7 @@ import WeeklyWeather from './pages/WeeklyWeather.js';
 import HomePage from './pages/HomePage.js'
 import SurfingWeather from './pages/SurfingWeather.js'
 import KayakingWeather from './pages/KayakingWeather.js'
+import SnorkelWeather from './pages/SnorkelWeather.js'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/weekly-weather" element={<WeeklyWeather />} />
           <Route path="/surfing-weather" element={<SurfingWeather />} />
           <Route path="/kayaking-weather" element={<KayakingWeather />} />
+          <Route path="/snorkel-weather" element={<SnorkelWeather />} />
         </Routes>
         <Footer />
       </div>
