@@ -17,6 +17,7 @@ import SailingWeather from './pages/SailingWeather.js';
 
 // Import user pages
 import SignIn from './pages/User Pages/SignIn.js';
+import Register from './pages/User Pages/Register.js';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/snorkel-weather" element={<SnorkelWeather />} />
           <Route path="/sailing-weather" element={<SailingWeather />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
         <Footer />
       </div>
