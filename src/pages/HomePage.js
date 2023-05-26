@@ -18,7 +18,7 @@ function HomePage() {
   return (
     <div className="homepage">
       <div style={mainDivStyle}>
-        <h2>OCEAN TIME?</h2>
+        <h2>IS IT OCEAN TIME?</h2>
         <p>What can I do in the ocean today?</p>
         <Link to="/kayaking-weather">
           <button style={buttonStyle}>KAYAKING?</button>
@@ -32,6 +32,10 @@ function HomePage() {
         <Link to="/sailing-weather">
           <button style={buttonStyle}>SAILING?</button>
         </Link>
+        <br>
+        </br>
+        <br>
+        </br>
         <Link to="/daily-weather">
           <button style={buttonStyle}>TODAY'S OVERALL FORECAST</button>
           </Link>
