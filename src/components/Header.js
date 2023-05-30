@@ -21,6 +21,9 @@ const Header = () => {
         <Link to="/register">
           <button style={buttonStyle}>Register</button>
         </Link>
+        <Link to="/blog">
+          <button style={buttonStyle}>Blog</button>
+        </Link>
       </div>
     </div>
   );
