@@ -1,8 +1,9 @@
+import React from 'react';
 import { useState } from "react";
 import {Link} from "react-router-dom"
 
 const Index = (props) => {
-
+  console.log(props,"props here")
   // loaded function
   const loaded = () => {
     return props.blog.map((blog) => (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
@@ -18,10 +18,37 @@ import SailingWeather from './pages/SailingWeather.js';
 // Import user pages
 import SignIn from './pages/User Pages/SignIn.js';
 import Register from './pages/User Pages/Register.js';
-
+import Index from "./pages/Index";
+import Create from "./pages/Create";
+import Show from "./pages/Show";
 
 function App() {
   const URL = `http://localhost:4000/`
+
+  const [blog, setBlog] = useState(null);
+
+  const getBlog = async () => {
+    const URL = `http://localhost:4000/blog`
+    const response = await fetch(URL);
+    const data = await response.json();
+    console.log(data.data)
+    setBlog(data.data);
+  };
+
+  const createBlog = async (blog) => {
+    await fetch(URL, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(blog),
+    });
+    getBlog();
+  };
+
+  useEffect(() => {
+    getBlog();
+  }, []);
 
   return (
     <Router>
@@ -37,12 +64,14 @@ function App() {
           <Route path="/sailing-weather" element={<SailingWeather />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/blog-index" element={<Index blog={blog} createBlog={createBlog} />} />
+          <Route path="/blog/create" element={<Create createBlog={createBlog} />} />
+          <Route path="/blog/:id" element={<Show />} />
         </Routes>
         <Footer />
       </div>
     </Router>
   );
 }
-
 
 export default App;

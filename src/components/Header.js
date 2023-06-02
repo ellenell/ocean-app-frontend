@@ -6,11 +6,17 @@ const buttonStyle = {
   color: 'white',
   padding: '10px 20px',
   fontSize: '16px',
-}
+};
+
+const headerStyle = {
+  backgroundColor: 'black',
+  color: 'white',
+  padding: '20px',
+};
 
 const Header = () => {
   return (
-<div className="homepage">
+    <div className="header" style={headerStyle}>
       <div>
         <Link to="/">
           <button style={buttonStyle}>Home</button>
@@ -27,6 +33,6 @@ const Header = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

@@ -8,11 +8,17 @@ const Show = (props) => {
 
   return (
     <div className="blogs">
-      <h1>{blogs.name}</h1>
-      <h2>{blogs.title}</h2>
-      <img src={blogs.image} alt={blogs.name} />
-    </div>
-  );
-}
+    {blogs ? (
+      <>
+        <h1>{blogs.name}</h1>
+        <h2>{blogs.title}</h2>
+        <img src={blogs.image} alt={blogs.name} />
+      </>
+    ) : (
+      <p>Loading...</p>
+    )}
+  </div>
+);
+    };
 
 export default Show;
