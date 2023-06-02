@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Create = ({ createBlog }) => {
   const [newBlog, setNewBlog] = useState({
@@ -6,6 +7,7 @@ const Create = ({ createBlog }) => {
     image: "",
     title: ""
   });
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     setNewBlog({ ...newBlog, [event.target.name]: event.target.value });
@@ -19,6 +21,9 @@ const Create = ({ createBlog }) => {
       image: "",
       title: ""
     });
+
+    // Redirect to the Show page after creating the blog
+    navigate("/blog-index");
   };
 
   return (

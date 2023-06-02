@@ -36,7 +36,8 @@ function App() {
   };
 
   const createBlog = async (blog) => {
-    await fetch(URL, {
+    const URLCreate = `http://localhost:4000/blog/create`
+    await fetch(URLCreate, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -62,11 +63,11 @@ function App() {
           <Route path="/kayaking-weather" element={<KayakingWeather />} />
           <Route path="/snorkel-weather" element={<SnorkelWeather />} />
           <Route path="/sailing-weather" element={<SailingWeather />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/register" element={<Register />} />
+          {/* <Route path="/signin" element={<SignIn />} />
+          <Route path="/register" element={<Register />} /> */}
           <Route path="/blog-index" element={<Index blog={blog} createBlog={createBlog} />} />
           <Route path="/blog/create" element={<Create createBlog={createBlog} />} />
-          <Route path="/blog/:id" element={<Show />} />
+          <Route path="/blog/:id" element={<Show blog={blog} />} />
         </Routes>
         <Footer />
       </div>
