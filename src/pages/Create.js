@@ -24,7 +24,7 @@ const Create = ({ createBlog }) => {
       name: "",
       image: "",
       description: "",
-      typeofactivity: ""
+      typeOfActivity: "",
     });
 
     // Redirect to the Show page after creating the blog
@@ -65,17 +65,25 @@ const Create = ({ createBlog }) => {
           onChange={handleChange}
           placeholder="Description"
         />
-        <select name="activity" id="activity" onChange={handleChange} value={newBlog.typeofactivity}>
-          <option value="">Select Activity</option>
-          <option value="surfing">Surfing</option>
-          <option value="kayaking">Kayaking</option>
-          <option value="sailing">Sailing</option>
-          <option value="swimming">Swimming</option>
-        </select>
+    <select
+      name="typeOfActivity"
+      id="typeOfActivity"
+      onChange={handleChange}
+      value={newBlog.typeOfActivity}
+    >
+    <option value="Surfing">Select Activity</option>
+    <option value="Surfing">Surfing</option>
+    <option value="Kayaking">Kayaking</option>
+    <option value="Sailing">Sailing</option>
+    <option value="Swimming">Snorkeling</option>
+    </select>
+
         <button type="submit">Create</button>
       </form>
     </div>
   );
 };
+
+// console.log(createBlog)
 
 export default Create;

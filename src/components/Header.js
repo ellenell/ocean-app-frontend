@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const headerStyle = {
   display: 'flex',
-  justifyContent: 'center', // Center the content horizontally
-  alignItems: 'center', // Center the content vertically
+  justifyContent: 'center',
+  alignItems: 'center',
   color: 'white',
   height: '3rem',
   position: 'fixed',
@@ -17,26 +17,16 @@ const headerStyle = {
 };
 
 const buttonStyle = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
   fontSize: '1.5rem',
-  padding: '3px 15px',
-  marginTop: '10px',
   margin: '1rem 1rem 0 0',
   color: 'white',
-  backgroundColor: 'black',
-  borderRadius: '15px',
-  textAlign: 'center',
-  textDecoration: 'none',
-  opacity: 1,
+  backgroundColor: 'transparent',
   border: 'none',
   cursor: 'pointer',
   textShadow: '1px 1px 2px black',
-  marginBottom: '10px', 
+  marginBottom: '10px',
   letterSpacing: '.5px',
   transition: 'transform 0.3s ease-in-out',
-  
 };
 
 const hoverStyles = {
@@ -62,56 +52,119 @@ const Header = () => {
     return buttonStyle;
   };
 
+  const containerStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+    padding: '0 1rem', // Adjust the padding to create more space
+  };
+
   const h1Style = {
-    ...buttonStyle,
     fontSize: '2rem',
     margin: '0',
+    color: 'white',
+    textShadow: '1px 1px 2px black',
+    marginLeft: '1rem',
+  };
+
+  const centerStyle = {
+    flex: 1,
+    textAlign: 'center',
+  };
+
+  const rightAlignStyle = {
+    textAlign: 'right',
+    whiteSpace: 'nowrap',
+    flex: 'none', // Added to prevent the register button from taking up extra space
   };
 
   return (
     <div className="header" style={headerStyle}>
-      <div>
-      <h1 style={h1Style}>SeaSense</h1>
-        <Link to="/">
-          <button
-            style={getButtonStyle('home')}
-            onMouseEnter={() => handleButtonHover('home')}
-            onMouseLeave={handleButtonLeave}
-          >
-            Home
-          </button>
-        </Link>
-        <Link to="/signin">
-          <button
-            style={getButtonStyle('signin')}
-            onMouseEnter={() => handleButtonHover('signin')}
-            onMouseLeave={handleButtonLeave}
-          >
-            Sign-In
-          </button>
-        </Link>
-        <Link to="/register">
-          <button
-            style={getButtonStyle('register')}
-            onMouseEnter={() => handleButtonHover('register')}
-            onMouseLeave={handleButtonLeave}
-          >
-            Register
-          </button>
-        </Link>
-        <Link to="/blog-index">
-          <button
-            style={getButtonStyle('blog')}
-            onMouseEnter={() => handleButtonHover('blog')}
-            onMouseLeave={handleButtonLeave}
-          >
-            Blog
-          </button>
-        </Link>
+      <div style={containerStyle}>
+        <div style={h1Style}>SeaSense</div>
+        <div style={centerStyle}>
+          <Link to="/">
+            <button
+              style={getButtonStyle('home')}
+              onMouseEnter={() => handleButtonHover('home')}
+              onMouseLeave={handleButtonLeave}
+            >
+              HOME
+            </button>
+          </Link>
+
+          <Link to="/daily-weather">
+            <button
+              style={getButtonStyle('daily-weather')}
+              onMouseEnter={() => handleButtonHover('daily-weather')}
+              onMouseLeave={handleButtonLeave}
+            >
+              DAILY WEATHER
+            </button>
+          </Link>
+          <Link to="/surfing-weather">
+            <button
+              style={getButtonStyle('surfing-weather')}
+              onMouseEnter={() => handleButtonHover('surfing-weather')}
+              onMouseLeave={handleButtonLeave}
+            >
+              SURFING
+            </button>
+          </Link>
+          
+          <Link to="/kayaking-weather">
+            <button
+              style={getButtonStyle('kayaking')}
+              onMouseEnter={() => handleButtonHover('kayaking')}
+              onMouseLeave={handleButtonLeave}
+            >
+              KAYAKING
+            </button>
+          </Link>
+
+          <Link to="/snorkeling-weather">
+            <button
+              style={getButtonStyle('snorkeling')}
+              onMouseEnter={() => handleButtonHover('snorkeling')}
+              onMouseLeave={handleButtonLeave}
+            >
+              SNORKELING
+            </button>
+          </Link>
+
+          <Link to="/sailing-weather">
+            <button
+              style={getButtonStyle('sailing-weather')}
+              onMouseEnter={() => handleButtonHover('sailing-weather')}
+              onMouseLeave={handleButtonLeave}
+            >
+              SAILING
+            </button>
+          </Link>
+        </div>
+        <div style={rightAlignStyle}>
+          <Link to="/signin">
+            <button
+              style={getButtonStyle('signin')}
+              onMouseEnter={() => handleButtonHover('signin')}
+              onMouseLeave={handleButtonLeave}
+            >
+              Sign-In
+            </button>
+          </Link>
+          <Link to="/register">
+            <button
+              style={getButtonStyle('register')}
+              onMouseEnter={() => handleButtonHover('register')}
+              onMouseLeave={handleButtonLeave}
+            >
+              Register
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
 };
-
 
 export default Header;

@@ -29,23 +29,25 @@ function App() {
   const [blog, setBlog] = useState(null);
 
   const getBlog = async () => {
-    const URL = `http://localhost:4000/blog`
-    const response = await fetch(URL);
+    const response = await fetch(`${URL}blog`);
     const data = await response.json();
     console.log(data.data)
     setBlog(data.data);
   };
 
-  const createBlog = async (blog) => {
-    const URLCreate = `http://localhost:4000/blog/create`
-    await fetch(URLCreate, {
+  const createBlog = async (newBlog) => {
+    const response = await fetch(`${URL}blog/create`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(blog),
+      body: JSON.stringify(newBlog),
     });
-    getBlog();
+    if (response.ok) {
+      getBlog();
+    } else {
+      console.error("Failed to create blog");
+    }
   };
 
   useEffect(() => {

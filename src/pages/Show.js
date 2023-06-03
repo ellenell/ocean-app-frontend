@@ -42,7 +42,7 @@ const Show = (props) => {
       <h1>{blogs.name}</h1>
       <h2>{formattedDate}</h2>
       <h2>{blogs.description}</h2>
-      <h2>{blogs.typeofactivity}</h2>
+      <h2>{blogs.typeOfActivity}</h2>
       <img src={blogs.image} alt={blogs.name} />
       <br />
       <br />

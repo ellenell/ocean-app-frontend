@@ -8,7 +8,7 @@ const Edit = () => {
     name: '',
     image: '',
     description: '',
-    typeofactivity: ''
+    typeOfActivity: ''
   });
 
   useEffect(() => {
@@ -85,12 +85,12 @@ const Edit = () => {
           onChange={handleChange}
           placeholder="Description"
         />
-        <select name="typeofactivity" id="typeofactivity" onChange={handleChange} value={formData.typeofactivity}>
+        <select name="typeOfActivity" id="typeOfActivity" onChange={handleChange} value={formData.typeOfActivity}>
           <option value="">Select Activity</option>
           <option value="Surfing">Surfing</option>
           <option value="Kayaking">Kayaking</option>
           <option value="Sailing">Sailing</option>
-          <option value="Swimming">Swimming</option>
+          <option value="Swimming">Snorkeling</option>
         </select>
         <button type="submit">Update</button>
       </form>
