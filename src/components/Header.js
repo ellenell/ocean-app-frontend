@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const headerStyle = {
-  display: 'grid',
-  gridTemplateRows: 'auto 1fr',
+  display: 'flex',
+  justifyContent: 'center', // Center the content horizontally
+  alignItems: 'center', // Center the content vertically
   color: 'white',
   height: '3rem',
-  alignItems: 'center',
   position: 'fixed',
   width: '100%',
   top: 0,
@@ -33,9 +33,10 @@ const buttonStyle = {
   border: 'none',
   cursor: 'pointer',
   textShadow: '1px 1px 2px black',
-  marginTop: '30px',
+  marginBottom: '10px', 
   letterSpacing: '.5px',
   transition: 'transform 0.3s ease-in-out',
+  
 };
 
 const hoverStyles = {
@@ -44,24 +45,66 @@ const hoverStyles = {
 };
 
 const Header = () => {
+  const [hoveredButton, setHoveredButton] = useState(null);
+
+  const handleButtonHover = (buttonName) => {
+    setHoveredButton(buttonName);
+  };
+
+  const handleButtonLeave = () => {
+    setHoveredButton(null);
+  };
+
+  const getButtonStyle = (buttonName) => {
+    if (hoveredButton === buttonName) {
+      return { ...buttonStyle, ...hoverStyles };
+    }
+    return buttonStyle;
+  };
+
   return (
     <div className="header" style={headerStyle}>
       <div>
         <Link to="/">
-          <button style={buttonStyle}>Home</button>
+          <button
+            style={getButtonStyle('home')}
+            onMouseEnter={() => handleButtonHover('home')}
+            onMouseLeave={handleButtonLeave}
+          >
+            Home
+          </button>
         </Link>
         <Link to="/signin">
-          <button style={buttonStyle}>Sign-In</button>
+          <button
+            style={getButtonStyle('signin')}
+            onMouseEnter={() => handleButtonHover('signin')}
+            onMouseLeave={handleButtonLeave}
+          >
+            Sign-In
+          </button>
         </Link>
         <Link to="/register">
-          <button style={buttonStyle}>Register</button>
+          <button
+            style={getButtonStyle('register')}
+            onMouseEnter={() => handleButtonHover('register')}
+            onMouseLeave={handleButtonLeave}
+          >
+            Register
+          </button>
         </Link>
         <Link to="/blog-index">
-          <button style={buttonStyle}>Blog</button>
+          <button
+            style={getButtonStyle('blog')}
+            onMouseEnter={() => handleButtonHover('blog')}
+            onMouseLeave={handleButtonLeave}
+          >
+            Blog
+          </button>
         </Link>
       </div>
     </div>
   );
 };
+
 
 export default Header;

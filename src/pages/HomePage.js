@@ -1,11 +1,19 @@
 import React from 'react';
-import { Link, Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import underwaterImage from '../images/underwater-2615376_1280.jpg';
 
 function HomePage() {
   const mainDivStyle = {
-    backgroundColor: 'lightblue',
+    backgroundImage: `url(${underwaterImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
     padding: '20px',
-    marginBottom: '20px',
   };
 
   const buttonStyle = {
@@ -13,11 +21,11 @@ function HomePage() {
     color: 'white',
     padding: '10px 20px',
     fontSize: '16px',
-  }
+  };
 
   return (
-    <div className="homepage">
-      <div style={mainDivStyle}>
+    <div className="homepage" style={mainDivStyle}>
+      <div>
         <h2>IS IT OCEAN TIME?</h2>
         <p>What can I do in the ocean today?</p>
         <Link to="/kayaking-weather">
@@ -32,14 +40,12 @@ function HomePage() {
         <Link to="/sailing-weather">
           <button style={buttonStyle}>SAILING?</button>
         </Link>
-        <br>
-        </br>
-        <br>
-        </br>
+        <br />
+        <br />
         <Link to="/daily-weather">
           <button style={buttonStyle}>TODAY'S OVERALL FORECAST</button>
-          </Link>
-          <Link to="/weekly-weather">
+        </Link>
+        <Link to="/weekly-weather">
           <button style={buttonStyle}>WEEKLY FORECAST</button>
         </Link>
       </div>
