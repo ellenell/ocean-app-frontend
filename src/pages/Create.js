@@ -7,7 +7,7 @@ const Create = ({ createBlog }) => {
     name: "",
     image: "",
     description: "",
-    activity: ""
+    typeofactivity: ""
   });
   const navigate = useNavigate();
 

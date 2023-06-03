@@ -26,7 +26,7 @@ function HomePage() {
   return (
     <div className="homepage" style={mainDivStyle}>
       <div>
-        <h2>OCEAN TIME</h2>
+        <h2>OceanPulse</h2>
         <p>What can I do in the ocean today?</p>
         <Link to="/surfing-weather">
           <button style={buttonStyle}>SURFING?</button>

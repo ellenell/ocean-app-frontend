@@ -18,9 +18,10 @@ import SailingWeather from './pages/SailingWeather.js';
 // Import user pages
 import SignIn from './pages/User Pages/SignIn.js';
 import Register from './pages/User Pages/Register.js';
-import Index from "./pages/Index";
-import Create from "./pages/Create";
-import Show from "./pages/Show";
+import Index from "./pages/Index.js";
+import Create from "./pages/Create.js";
+import Show from "./pages/Show.js";
+import Edit from "./pages/Edit.js"
 
 function App() {
   const URL = `http://localhost:4000/`
@@ -68,6 +69,7 @@ function App() {
           <Route path="/blog-index" element={<Index blog={blog} createBlog={createBlog} />} />
           <Route path="/blog/create" element={<Create createBlog={createBlog} />} />
           <Route path="/blog/:id" element={<Show blog={blog} />} />
+          <Route path="/blog/edit/:id" element={<Edit blog={blog} />} />
         </Routes>
         <Footer />
       </div>

@@ -62,9 +62,16 @@ const Header = () => {
     return buttonStyle;
   };
 
+  const h1Style = {
+    ...buttonStyle,
+    fontSize: '2rem',
+    margin: '0',
+  };
+
   return (
     <div className="header" style={headerStyle}>
       <div>
+      <h1 style={h1Style}>SeaSense</h1>
         <Link to="/">
           <button
             style={getButtonStyle('home')}
