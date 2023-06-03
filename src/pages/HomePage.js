@@ -26,13 +26,13 @@ function HomePage() {
   return (
     <div className="homepage" style={mainDivStyle}>
       <div>
-        <h2>IS IT OCEAN TIME?</h2>
+        <h2>OCEAN TIME</h2>
         <p>What can I do in the ocean today?</p>
-        <Link to="/kayaking-weather">
-          <button style={buttonStyle}>KAYAKING?</button>
-        </Link>
         <Link to="/surfing-weather">
           <button style={buttonStyle}>SURFING?</button>
+        </Link>
+        <Link to="/kayaking-weather">
+          <button style={buttonStyle}>KAYAKING?</button>
         </Link>
         <Link to="/snorkel-weather">
           <button style={buttonStyle}>SNORKELING?</button>
