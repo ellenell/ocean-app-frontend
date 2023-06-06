@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
 const headerStyle = {
   display: 'flex',
   justifyContent: 'center',
@@ -81,7 +82,17 @@ const Header = () => {
   return (
     <div className="header" style={headerStyle}>
       <div style={containerStyle}>
-        <div style={h1Style}>SeaSense</div>
+        <div style={h1Style}>
+        <Link to="/about">
+            <button
+              style={getButtonStyle('about')}
+              onMouseEnter={() => handleButtonHover('about')}
+              onMouseLeave={handleButtonLeave}
+            >
+              SeaSense
+            </button>
+          </Link>
+        </div>
         <div style={centerStyle}>
           <Link to="/">
             <button
@@ -139,6 +150,16 @@ const Header = () => {
               onMouseLeave={handleButtonLeave}
             >
               SAILING
+            </button>
+          </Link>
+
+          <Link to="/blog-index">
+            <button
+              style={getButtonStyle('blog')}
+              onMouseEnter={() => handleButtonHover('blog')}
+              onMouseLeave={handleButtonLeave}
+            >
+              BLOG
             </button>
           </Link>
         </div>

@@ -6,7 +6,8 @@ const Footer = () => {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '0 2rem',
+    padding: '1px',
+    paddingRight: '300px', 
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     color: 'white',
     height: '2rem',
@@ -20,7 +21,7 @@ const Footer = () => {
 
   return (
     <div style={footerStyle}>
-      <h1>Footer</h1>
+      <h1>Footer  </h1>
     </div>
   );
 };

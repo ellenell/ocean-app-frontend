@@ -36,7 +36,7 @@ const KayakingWeather = () => {
       <h2>YES</h2> 
         <h3>It is safe to go kayaking today</h3>
     </>
-    );
+  );
   
   }
 

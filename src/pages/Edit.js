@@ -69,7 +69,16 @@ const Edit = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="Name"
+          placeholder="Blog Title"
+          
+        />
+        <input
+          type="text"
+          name="by"
+          value={formData.by}
+          onChange={handleChange}
+          placeholder="Author"
+          
         />
         <input
           type="text"
@@ -83,7 +92,7 @@ const Edit = () => {
           name="description"
           value={formData.description}
           onChange={handleChange}
-          placeholder="Description"
+          placeholder="Description of Event"
         />
         <select name="typeOfActivity" id="typeOfActivity" onChange={handleChange} value={formData.typeOfActivity}>
           <option value="">Select Activity</option>

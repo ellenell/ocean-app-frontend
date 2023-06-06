@@ -23,6 +23,8 @@ import Create from "./pages/Create.js";
 import Show from "./pages/Show.js";
 import Edit from "./pages/Edit.js"
 
+import About from "./pages/About.js"
+
 function App() {
   const URL = `http://localhost:4000/`
 
@@ -72,6 +74,7 @@ function App() {
           <Route path="/blog/create" element={<Create createBlog={createBlog} />} />
           <Route path="/blog/:id" element={<Show blog={blog} />} />
           <Route path="/blog/edit/:id" element={<Edit blog={blog} />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </div>

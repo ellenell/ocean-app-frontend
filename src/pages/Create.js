@@ -5,6 +5,7 @@ const Create = ({ createBlog }) => {
   const [newBlog, setNewBlog] = useState({
     date: "",
     name: "",
+    by: "",
     image: "",
     description: "",
     typeofactivity: ""
@@ -22,6 +23,7 @@ const Create = ({ createBlog }) => {
     setNewBlog({
       date: "",
       name: "",
+      by: "",
       image: "",
       description: "",
       typeOfActivity: "",
@@ -49,7 +51,14 @@ const Create = ({ createBlog }) => {
           name="name"
           value={newBlog.name}
           onChange={handleChange}
-          placeholder="Name"
+          placeholder="Blog Title"
+        />
+          <input
+          type="text"
+          name="by"
+          value={newBlog.by}
+          onChange={handleChange}
+          placeholder="Author"
         />
         <input
           type="text"
@@ -63,7 +72,7 @@ const Create = ({ createBlog }) => {
           name="description"
           value={newBlog.description}
           onChange={handleChange}
-          placeholder="Description"
+          placeholder="Description of Event"
         />
     <select
       name="typeOfActivity"

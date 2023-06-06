@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import underwaterImage from '../images/underwater-2615376_1280.jpg';
+import underwaterImage from '../images/test.png';
 
 const mainDivStyle = {
   backgroundImage: `url(${underwaterImage})`,

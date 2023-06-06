@@ -18,9 +18,19 @@ const mainDivStyle = {
 const titleStyle = {
   fontSize: '50px',
   fontWeight: 'bold',
-  marginBottom: '20px',
+  marginBottom: '45px',
   color: 'white',
-  textShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
+  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+}
+
+const titleStyle3 = {
+  fontSize: '30px',
+  fontWeight: 'bold',
+  marginBottom: '10px',
+  marginTop: '10px',
+  color: 'white',
+  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+  textAlign: 'center',
 }
 
 const paragraphStyle = {
@@ -40,7 +50,8 @@ const buttonStyle = {
 const decisionStyle = {
   fontSize: '70px',
   fontWeight: 'bold',
-  marginBottom: '1px',
+  marginBottom: '.1px',
+  padding: '1px',
   color: 'white',
   textShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
 }
@@ -62,48 +73,58 @@ const chartContainerStyle = {
 const tableStyle = {
   borderCollapse: 'collapse',
   width: '100%',
+  textAlign: 'center'
 }
 
 const thStyle = {
   borderBottom: '2px solid white',
   padding: '8px',
-  textAlign: 'left',
+  textAlign: 'center',
 }
 
 const tdStyle = {
   borderBottom: '1px solid white',
   padding: '8px',
-  textAlign: 'left',
+  textAlign: 'center',
+  color: 'white',
+  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
 }
 
 const formStyle = {
   backgroundColor: 'black',
   color: 'white',
-  fontSize: '20px',
-  fontColor: 'white',
-  width: '200px',
-  height: '.5px',
+  fontSize: '25px',
+  width: '250px',
+  height: '40px',
   margin: '0 auto',
-  padding: '20px 40px 20px',
-  // boxShadow: '1px 1px 3px'
+  padding: '10px 20px',
   fontWeight: 'bold',
   letterSpacing: '.5px',
+  border: 'none',
+  borderRadius: '5px',
+  boxShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
+  '&::placeholder': {
+    color: 'red',
+  },
 }
 
 const submitButton = {
-  backgroundColor: 'black',
+  backgroundColor: 'blue',
   color: 'white',
-  fontSize: '20px',
-  fontColor: 'white',
-  width: '285px',
-  height: '15px',
-  padding: '15px 10px 20px',
+  fontSize: '25px',
+  width: '80px',
+  height: '50px',
   margin: '0 auto',
+  padding: '10px 20px',
   cursor: 'pointer',
   transition: 'transform 0.3s ease-in-out',
   fontWeight: 'bold',
   letterSpacing: '.5px',
-}
+  border: 'none',
+  borderRadius: '30px',
+  boxShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
+  marginLeft: '30px',
+};
 
 
 
@@ -131,6 +152,12 @@ const SurfingWeather = () => {
   const inputLocation = (event) => {
     setLocation(event.target.value);
   };
+
+  const convertMetersToFeet = (meters) => {
+    const feet = meters * 3.281;
+    return Math.round(feet);
+  };
+  
 
   const submitLocation = async (event) => {
     event.preventDefault();
@@ -167,10 +194,19 @@ const SurfingWeather = () => {
       {weatherData ? (
         <>
           {surfingStatus}
-          <h2 style={titleStyle}>Weather Conditions in {weatherData.name}:</h2>
+
           <div style={chartContainerStyle}>
             <table style={tableStyle}>
               <tbody>
+              <tr>
+              <td style={{ ...tdStyle, textAlign: 'center' }} colSpan={2}>
+          <h3 style={titleStyle3}>Weather Conditions in {weatherData.name}:</h3>
+        </td>
+              </tr>
+                <tr>
+                <td style={tdStyle}>Weather Description</td>
+                <td style={tdStyle}>{weatherData.weather[0].description}</td>
+              </tr>
                 <tr>
                   <td style={tdStyle}>Wind Speed</td>
                   <td style={tdStyle}>{weatherData.wind.speed} mph</td>
@@ -180,9 +216,13 @@ const SurfingWeather = () => {
                   <td style={tdStyle}>{weatherData.wind.deg}°</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>Wind Gust</td>
-                  <td style={tdStyle}>{weatherData.wind.gust} mph</td>
-                </tr>
+                <td style={tdStyle}>Temperature</td>
+                <td style={tdStyle}>{weatherData.main.temp} °F</td>
+              </tr>
+              <tr>
+                <td style={tdStyle}>Visibility</td>
+                <td style={tdStyle}>{convertMetersToFeet(weatherData.visibility)} ft</td>
+              </tr>
               </tbody>
             </table>
           </div>
@@ -199,8 +239,6 @@ const SurfingWeather = () => {
                   onChange={inputLocation}
                   placeholder="Enter Your Location"
                 />
-                 <br />
-                 <br />
                  <button
                   style={hoveredButton ? { ...submitButton, ...hoverStyles } : submitButton}
                   type="submit"
