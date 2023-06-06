@@ -28,7 +28,7 @@ const SailingWeather = () => {
       <>
         <div>
           <h2>NO</h2>
-          <h3>It is not safe to go sailing today</h3>
+          <h3>It is not safe to go sailing today. Have fun!</h3>
         </div>
       </>
     );

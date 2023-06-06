@@ -104,15 +104,6 @@ const Header = () => {
             </button>
           </Link>
 
-          <Link to="/daily-weather">
-            <button
-              style={getButtonStyle('daily-weather')}
-              onMouseEnter={() => handleButtonHover('daily-weather')}
-              onMouseLeave={handleButtonLeave}
-            >
-              DAILY WEATHER
-            </button>
-          </Link>
           <Link to="/surfing-weather">
             <button
               style={getButtonStyle('surfing-weather')}

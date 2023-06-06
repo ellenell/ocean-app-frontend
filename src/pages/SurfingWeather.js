@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import mainImage from '../images/pexels-pixabay-355288.jpg';
+
 
 const mainDivStyle = {
-  // backgroundImage: `url(${underwaterImage})`,
-  backgroundColor: 'grey',
+  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(${mainImage})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   minHeight: '100vh',
@@ -13,7 +14,8 @@ const mainDivStyle = {
   justifyContent: 'center',
   flexDirection: 'column',
   padding: '20px',
-}
+  letterSpacing: '1px',
+};
 
 const titleStyle = {
   fontSize: '50px',
@@ -21,7 +23,8 @@ const titleStyle = {
   marginBottom: '45px',
   color: 'white',
   textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
-}
+  letterSpacing: '1px',
+};
 
 const titleStyle3 = {
   fontSize: '30px',
@@ -31,13 +34,14 @@ const titleStyle3 = {
   color: 'white',
   textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
   textAlign: 'center',
-}
+  letterSpacing: '1px',
+};
 
 const paragraphStyle = {
   fontSize: '30px',
   color: 'white',
   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-}
+};
 
 const buttonStyle = {
   backgroundColor: 'blue',
@@ -45,7 +49,7 @@ const buttonStyle = {
   padding: '10px 20px',
   fontSize: '16px',
   marginBottom: '10px',
-}
+};
 
 const decisionStyle = {
   fontSize: '70px',
@@ -54,13 +58,15 @@ const decisionStyle = {
   padding: '1px',
   color: 'white',
   textShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
-}
+  letterSpacing: '1px',
+};
 
 const explanationStyle = {
   fontSize: '50px',
   color: 'white',
   textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)',
-}
+  letterSpacing: '1px',
+};
 
 const chartContainerStyle = {
   display: 'flex',
@@ -68,19 +74,22 @@ const chartContainerStyle = {
   alignItems: 'center',
   border: '1px solid white',
   padding: '10px',
-}
+  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+  letterSpacing: '1px',
+};
 
 const tableStyle = {
   borderCollapse: 'collapse',
   width: '100%',
-  textAlign: 'center'
-}
+  textAlign: 'center',
+  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+};
 
 const thStyle = {
   borderBottom: '2px solid white',
   padding: '8px',
   textAlign: 'center',
-}
+};
 
 const tdStyle = {
   borderBottom: '1px solid white',
@@ -88,7 +97,8 @@ const tdStyle = {
   textAlign: 'center',
   color: 'white',
   textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
-}
+  letterSpacing: '1px',
+};
 
 const formStyle = {
   backgroundColor: 'black',
@@ -102,11 +112,13 @@ const formStyle = {
   letterSpacing: '.5px',
   border: 'none',
   borderRadius: '5px',
+  letterSpacing: '1px',
   boxShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
   '&::placeholder': {
     color: 'red',
+    
   },
-}
+};
 
 const submitButton = {
   backgroundColor: 'blue',
@@ -124,8 +136,25 @@ const submitButton = {
   borderRadius: '30px',
   boxShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
   marginLeft: '30px',
+  letterSpacing: '1px',
 };
 
+const refreshButtonStyle = {
+  backgroundColor: 'rgba(0, 0, 0, 0.7)', 
+  color: 'white',
+  padding: '5px 5px',
+  marginTop: '50px',
+  fontSize: '15px',
+  marginBottom: '10px',
+  display: 'inline-block',
+  width: '200px',
+  textAlign: 'center',
+  margin: '20px',
+  transition: 'transform 0.3s',
+  textShadow: '5px 5px 5px rgba(0, 0, 0,)',
+  opacity: 0.8,
+  letterSpacing: '1px',
+};
 
 
 const hoverStyles = {
@@ -133,21 +162,21 @@ const hoverStyles = {
   opacity: 0.8,
 };
 
-
 const SurfingWeather = () => {
   const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
-  const [hoveredButton, setHoveredButton] = useState(false); 
+  const [hoveredButton, setHoveredButton] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const API_KEY = '03811f078e215996083861bf2f7eabf2';
 
   const handleButtonHover = () => {
     setHoveredButton(true);
-  }
-  
+  };
+
   const handleButtonLeave = () => {
     setHoveredButton(false);
-  }
+  };
 
   const inputLocation = (event) => {
     setLocation(event.target.value);
@@ -157,7 +186,6 @@ const SurfingWeather = () => {
     const feet = meters * 3.281;
     return Math.round(feet);
   };
-  
 
   const submitLocation = async (event) => {
     event.preventDefault();
@@ -167,9 +195,14 @@ const SurfingWeather = () => {
       );
       const data = await response.json();
       setWeatherData(data);
+      setSubmitted(true);
     } catch (error) {
       console.error(error);
     }
+  };
+
+  const handleRefresh = () => {
+    window.location.reload();
   };
 
   let surfingStatus = '';
@@ -184,7 +217,7 @@ const SurfingWeather = () => {
     surfingStatus = (
       <>
         <h2 style={decisionStyle}>YES</h2>
-        <h3 style={explanationStyle}>It is safe to go surfing today</h3>
+        <h3 style={explanationStyle}>It is safe to go surfing today </h3>
       </>
     );
   }
@@ -228,29 +261,35 @@ const SurfingWeather = () => {
           </div>
         </>
       ) : (
-          <>
-            <h2 style={titleStyle}>Can I Go Surfing Today?</h2>
-            <div className="SurfingDiv">
-              <form onSubmit={submitLocation}>
-                <input
-                  style={formStyle}
-                  type="text"
-                  value={location}
-                  onChange={inputLocation}
-                  placeholder="Enter Your Location"
-                />
-                 <button
-                  style={hoveredButton ? { ...submitButton, ...hoverStyles } : submitButton}
-                  type="submit"
-                  onMouseEnter={handleButtonHover}
-                  onMouseLeave={handleButtonLeave}
-                  >GO</button>
-              </form>
-            </div>
-          </>
-        )}
-      </div>
-    );
+        <>
+          <h1 style={titleStyle}>Can I Go Surfing Today?</h1>
+          <form onSubmit={submitLocation}>
+            <input
+              type="text"
+              placeholder="Enter Location"
+              style={formStyle}
+              onChange={inputLocation}
+            />
+            <button
+              type="submit"
+              style={{ ...submitButton, ...(hoveredButton ? hoverStyles : {}) }}
+              onMouseEnter={handleButtonHover}
+              onMouseLeave={handleButtonLeave}
+            >
+              Go
+            </button>
+          </form>
+        </>
+      )}
+
+      {weatherData && (
+        <button style={refreshButtonStyle} onClick={handleRefresh}>
+          Check Another Location 
+        </button>
+      )}
+
+    </div>
+  );
 };
 
 export default SurfingWeather;
