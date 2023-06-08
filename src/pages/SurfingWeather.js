@@ -121,11 +121,11 @@ const formStyle = {
 };
 
 const submitButton = {
-  backgroundColor: 'blue',
+  backgroundColor: '#1f0083',
   color: 'white',
   fontSize: '25px',
   width: '80px',
-  height: '50px',
+  height: '60px',
   margin: '0 auto',
   padding: '10px 20px',
   cursor: 'pointer',
@@ -137,6 +137,7 @@ const submitButton = {
   boxShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
   marginLeft: '30px',
   letterSpacing: '1px',
+  textShadow: '1px 1px 5px rgba(0, 0, 0, 0.5)',
 };
 
 const refreshButtonStyle = {

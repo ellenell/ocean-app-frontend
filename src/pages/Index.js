@@ -7,7 +7,7 @@ const linkColor = '#D4F1F4'
 
 
 const mainDiv = {
-  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(${underwaterImage})`,
+  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${underwaterImage})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   minHeight: '100vh',
@@ -15,21 +15,25 @@ const mainDiv = {
   alignItems: 'center',
   justifyContent: 'center',
   flexDirection: 'column',
-  padding: '20px',
+  padding: '5px',
+  
 };
 
 const titleStyle = {
   fontSize: '24px',
   fontWeight: 'bold',
   marginBottom: '10px',
-  marginTop: '50px',
+  marginTop: '30px',
   textDecoration: 'none',
+  color: 'white',
+  textShadow: '1px 1px 1px rgba(0, 0, 0)',
+  letterSpacing: '1.5px',
+  transition: 'color 0.3s',
 };
 
 const listItemStyle = {
   position: 'relative',
-  color: linkColor,
-  paddingLeft: '0px', // Adjust the padding value as needed
+  color: 'white',
 };
 
 const bulletStyle = {
@@ -51,18 +55,19 @@ const subtitleStyle = {
 };
 
 const imageStyle = {
-  width: '15%',
+  width: '40%',
   height: 'auto',
   marginBottom: '10px',
 };
 
 const h2Div = {
-  color: linkColor,
-  fontSize: '60px',
+  color: 'white',
+  fontSize: '70px',
   fontWeight: 'bold',
   marginBottom: '20px',
-  textShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
-  textDecoration: 'underline'
+  textDecoration: 'underline',
+  textShadow: '1px 1px 1px rgba(0, 0, 0)',
+  letterSpacing: '1.5px',
 }
 
 const Index = (props) => {
@@ -73,9 +78,12 @@ const Index = (props) => {
       <ul>
         {props.blog.map((blog) => (
           <li key={blog._id} className="blog" style={listItemStyle}>
-            <span style={bulletStyle}></span>
+            <span></span>
             <Link to={`/blog/${blog._id}`}>
-              <h1 style={titleStyle}>{blog.name}</h1>
+              <h1 style={titleStyle}
+                onMouseEnter={(e) => (e.target.style.color = linkColor)}
+                onMouseLeave={(e) => (e.target.style.color = 'white')}
+              >{blog.name}</h1>
             </Link>
             <h3>{formatDate(blog.by)}</h3>
             <h3>{formatDate(blog.date)}</h3>
