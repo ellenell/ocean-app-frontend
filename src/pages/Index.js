@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import underwaterImage from '../images/ivan-bandura-2FEE6BR343k-unsplash.jpg';
 
@@ -26,14 +26,18 @@ const titleStyle = {
   marginTop: '30px',
   textDecoration: 'none',
   color: 'white',
-  textShadow: '1px 1px 1px rgba(0, 0, 0)',
+  textShadow: '3px 5px 5px rgba(0, 0, 0)',
   letterSpacing: '1.5px',
-  transition: 'color 0.3s',
+};
+
+const linkStyle = {
+  textDecoration: 'none',
 };
 
 const listItemStyle = {
   position: 'relative',
   color: 'white',
+  listStyleType: 'none',
 };
 
 const bulletStyle = {
@@ -66,12 +70,62 @@ const h2Div = {
   fontWeight: 'bold',
   marginBottom: '20px',
   textDecoration: 'underline',
-  textShadow: '1px 1px 1px rgba(0, 0, 0)',
+  textShadow: '1px 3px 5px rgba(0, 0, 0)',
   letterSpacing: '1.5px',
 }
 
+const lineStyle = {
+  borderBottom: '3px dashed white',
+};
+
+const createButton = {
+  color: 'white',
+  fontSize: '25px',
+  marginBottom: '10px',
+  display: 'inline-block',
+  margin: '20px',
+  transition: 'transform 0.3s',
+  textShadow: '1px 5px 5px rgba(0, 0, 0, 1)',
+  letterSpacing: '1px',
+  textDecoration: 'none'
+};
+
+const buttonStyle = {
+  backgroundColor: 'rgba(0, 0, 0, 0.7)',
+  color: 'white',
+  padding: '5px 5px',
+  fontSize: '20px',
+  marginBottom: '5px',
+  display: 'inline-block',
+  width: '225px',
+  textAlign: 'center',
+  margin: '10px',
+  transition: 'transform 0.3s',
+  textShadow: '1px 5px 5px rgba(0, 0, 0)',
+  letterSpacing: '1.5px',
+};
+
+const hoverButtonStyle = {
+  ...buttonStyle,
+  transform: 'scale(0.9)',
+  opacity: 0.8,
+  backgroundColor: 'rgba(0, 0, 0, 0.9)',
+};
+
+
 const Index = (props) => {
+
+  const [hoveredButton, setHoveredButton] = useState(null);
   const loaded = () => {
+
+
+    const handleMouseEnter = (buttonName) => {
+      setHoveredButton(buttonName);
+    };
+    
+    const handleMouseLeave = () => {
+      setHoveredButton(null);
+    };
     return (
       <div style={mainDiv}> 
       <h2 style={h2Div}> YOUR OCEAN BLOG</h2>
@@ -79,7 +133,7 @@ const Index = (props) => {
         {props.blog.map((blog) => (
           <li key={blog._id} className="blog" style={listItemStyle}>
             <span></span>
-            <Link to={`/blog/${blog._id}`}>
+            <Link to={`/blog/${blog._id}`} style={linkStyle}>
               <h1 style={titleStyle}
                 onMouseEnter={(e) => (e.target.style.color = linkColor)}
                 onMouseLeave={(e) => (e.target.style.color = 'white')}
@@ -89,9 +143,21 @@ const Index = (props) => {
             <h3>{formatDate(blog.date)}</h3>
             <img src={blog.image} alt={blog.name} style={imageStyle} />
             <h3>{blog.title}</h3>
+            <div style={lineStyle}></div>
           </li>
         ))}
       </ul>
+      <div style={createButton}> 
+      <Link to="/blog/create">
+          <button
+            style={hoveredButton === 'create' ? hoverButtonStyle : buttonStyle}
+            onMouseEnter={() => handleMouseEnter('create')}
+            onMouseLeave={handleMouseLeave}
+          >
+            Create a New Blog
+          </button>
+        </Link>
+      </div>
       </div>
     );
   };

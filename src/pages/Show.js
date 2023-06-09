@@ -41,8 +41,8 @@ const h2Style = {
   letterSpacing: '1px',
   paddingLeft: '400px',
   paddingRight: '400px',
-  marginRight: '100px',
-  marginLeft: '100px',
+  // marginRight: '100px',
+  // marginLeft: '100px',
   lineSpacing: '50px'
 };
 
@@ -82,13 +82,11 @@ const hoverButtonStyle = {
 };
 
 const borderBlog = {
-  border: '7px solid rgba(0, 0, 0, 0.3)',
-  borderRadius: '1px',
-  paddingTop: '.1px',
-  padding: '.1px',
-  // marginLeft: 'auto',
-  // marginRight: 'auto',
-  marginBottom: '10px',
+  width: 'fit-content', 
+  // margin: '0 auto', 
+  // padding: '5px', 
+  boxSizing: 'content-box', 
+  border: '3px solid rgba(0, 0, 0)',
   backdropFilter: 'blur(5px)',
   backgroundColor: 'rgba(0, 0, 0, 0.3)',
 };

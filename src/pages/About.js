@@ -1,4 +1,19 @@
-import React from "react";
+import React, { useState } from 'react';
+import underwaterImage from '../images/animals-g69a63112c_1280.jpg';
+
+
+const mainDiv = {
+  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${underwaterImage})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  minHeight: '100vh',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: '5px',
+  
+};
 
 const AboutPage = () => {
   const containerStyle = {
@@ -6,7 +21,15 @@ const AboutPage = () => {
     margin: "0 auto",
     padding: "20px",
     fontFamily: "Arial, sans-serif",
-    color: "#333",
+    width: 'fit-content', 
+    color: 'white',
+    margin: '0 auto', 
+    padding: '5px', 
+    boxSizing: 'content-box', 
+    border: '3px solid rgba(0, 0, 0)',
+    backdropFilter: 'blur(5px)',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    textShadow: '1px 1px 5px rgba(0, 0, 0, 1)',
   };
 
   const headingStyle = {
@@ -23,6 +46,7 @@ const AboutPage = () => {
   };
 
   return (
+    <div style={mainDiv}> 
     <div style={containerStyle}>
       <h1 style={headingStyle}>About SeaSence</h1>
       <p style={paragraphStyle}>
@@ -58,6 +82,7 @@ const AboutPage = () => {
         practices, conservation efforts, and raising awareness, we can strive to
         ensure the health and longevity of this vital ecosystem.
       </p>
+    </div>
     </div>
   );
 };

@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import video from '../images/waves.mp4';
+import '../fonts/fonts.css';
 
 function HomePage() {
   const [hoveredButton, setHoveredButton] = useState(null);
 
   const mainDivStyle = {
+    fontFamily: 'oceanName',
     position: 'fixed',
     top: 0,
     left: 0,
@@ -39,6 +41,7 @@ function HomePage() {
     padding: '20px',
     color: 'white',
     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+    fontFamily: 'oceanName',
   };
 
   const buttonStyle = {
@@ -54,6 +57,7 @@ function HomePage() {
     transition: 'transform 0.3s',
     textShadow: '1px 1px 5px rgba(255,255,255,)',
     letterSpacing: '1px',
+    fontFamily: 'oceanName',
   };
 
   const hoverButtonStyle = {

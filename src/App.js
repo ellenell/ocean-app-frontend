@@ -66,7 +66,7 @@ function App() {
           <Route path="/weekly-weather" element={<WeeklyWeather />} />
           <Route path="/surfing-weather" element={<SurfingWeather />} />
           <Route path="/kayaking-weather" element={<KayakingWeather />} />
-          <Route path="/snorkel-weather" element={<SnorkelWeather />} />
+          <Route path="/snorkeling-weather" element={<SnorkelWeather />} />
           <Route path="/sailing-weather" element={<SailingWeather />} />
           {/* <Route path="/signin" element={<SignIn />} />
           <Route path="/register" element={<Register />} /> */}
