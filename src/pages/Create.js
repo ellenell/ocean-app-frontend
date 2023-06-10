@@ -75,7 +75,7 @@ const Create = ({ createBlog }) => {
     borderRadius: "3px",
     border: "1px solid #ccc",
     backgroundColor: "#fff",
-    verticalAlign: "top", // Align text to the top
+    verticalAlign: "top", 
   };
 
   const buttonStyle = {
