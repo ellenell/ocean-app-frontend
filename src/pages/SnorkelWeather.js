@@ -16,6 +16,7 @@ const mainDivStyle = {
   flexDirection: 'column',
   padding: '20px',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const titleStyle = {
@@ -25,6 +26,7 @@ const titleStyle = {
   color: 'white',
   textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const titleStyle3 = {
@@ -36,6 +38,7 @@ const titleStyle3 = {
   textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
   textAlign: 'center',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const paragraphStyle = {
@@ -60,6 +63,7 @@ const decisionStyle = {
   color: 'white',
   textShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const explanationStyle = {
@@ -67,6 +71,7 @@ const explanationStyle = {
   color: 'white',
   textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const chartContainerStyle = {
@@ -77,6 +82,7 @@ const chartContainerStyle = {
   padding: '10px',
   textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const tableStyle = {
@@ -84,6 +90,7 @@ const tableStyle = {
   width: '100%',
   textAlign: 'center',
   textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+  fontFamily: 'oceanName',
 };
 
 const thStyle = {
@@ -99,6 +106,7 @@ const tdStyle = {
   color: 'white',
   textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const formStyle = {
@@ -114,6 +122,7 @@ const formStyle = {
   border: 'none',
   borderRadius: '5px',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
   boxShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
   '&::placeholder': {
     color: 'red',
@@ -139,6 +148,7 @@ const submitButton = {
   marginLeft: '30px',
   letterSpacing: '1px',
   textShadow: '1px 1px 5px rgba(0, 0, 0, 0.5)',
+  fontFamily: 'oceanName',
 };
 
 const refreshButtonStyle = {
@@ -153,11 +163,11 @@ const refreshButtonStyle = {
   textAlign: 'center',
   margin: '20px',
   transition: 'transform 0.3s',
-  textShadow: '5px 5px 5px rgba(0, 0, 0,)',
+  textShadow: '5px 5px 5px rgba(0, 0, 0)',
   opacity: 0.8,
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
-
 
 const hoverStyles = {
   transform: 'scale(0.9)',

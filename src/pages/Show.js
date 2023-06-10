@@ -19,6 +19,7 @@ const mainDiv = {
   flexDirection: 'column',
   // padding: '5px',
   color: 'white',
+  fontFamily: 'oceanName',
 };
 
 const h1Style = {
@@ -29,6 +30,7 @@ const h1Style = {
   textShadow: '1px 1px 5px rgba(0, 0, 0, 1)',
   letterSpacing: '1px',
   justifyContent: 'left',
+  fontFamily: 'oceanName',
 };
 
 const imageStyle = {
@@ -46,7 +48,8 @@ const h2Style = {
   paddingRight: '400px',
   // marginRight: '100px',
   // marginLeft: '100px',
-  lineSpacing: '50px'
+  lineSpacing: '50px',
+  fontFamily: 'oceanName',
 };
 
 const linkDiv = {
@@ -59,7 +62,8 @@ const linkDiv = {
   transition: 'transform 0.3s',
   textShadow: '1px 1px 1px rgba(0, 0, 0, 1)',
   letterSpacing: '1px',
-  textDecoration: 'none'
+  textDecoration: 'none',
+  fontFamily: 'oceanName',
 };
 
 const buttonStyle = {
@@ -75,6 +79,7 @@ const buttonStyle = {
   transition: 'transform 0.3s',
   textShadow: '1px 1px 1px rgba(0, 0, 0)',
   letterSpacing: '1.5px',
+  fontFamily: 'oceanName',
 };
 
 const hoverButtonStyle = {
@@ -82,6 +87,7 @@ const hoverButtonStyle = {
   transform: 'scale(0.9)',
   opacity: 0.8,
   backgroundColor: 'rgba(0, 0, 0, 0.9)',
+  fontFamily: 'oceanName',
 };
 
 const borderBlog = {
@@ -92,6 +98,7 @@ const borderBlog = {
   border: '3px solid rgba(0, 0, 0)',
   backdropFilter: 'blur(5px)',
   backgroundColor: 'rgba(0, 0, 0, 0.3)',
+  fontFamily: 'oceanName',
 };
 
 const Show = (props) => {
