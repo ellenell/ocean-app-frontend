@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import mainImage from '../images/pexels-pixabay-355288.jpg';
+import mainImage from '../images/pexels-ben-mack-5326905.jpg';
 
 import '../fonts/fonts.css';
 
 const mainDivStyle = {
-  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(${mainImage})`,
+  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(${mainImage})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   minHeight: '100vh',
@@ -16,6 +16,7 @@ const mainDivStyle = {
   flexDirection: 'column',
   padding: '20px',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const titleStyle = {
@@ -23,8 +24,9 @@ const titleStyle = {
   fontWeight: 'bold',
   marginBottom: '45px',
   color: 'white',
-  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+  textShadow: '4px 1px 3px rgba(0, 0, 0)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const titleStyle3 = {
@@ -33,15 +35,16 @@ const titleStyle3 = {
   marginBottom: '10px',
   marginTop: '10px',
   color: 'white',
-  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+  textShadow: '4px 1px 3px rgba(0, 0, 0,)',
   textAlign: 'center',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const paragraphStyle = {
   fontSize: '30px',
   color: 'white',
-  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+  textShadow: '2px 2px 4px rgba(0, 0, 0)',
 };
 
 const buttonStyle = {
@@ -58,15 +61,17 @@ const decisionStyle = {
   marginBottom: '.1px',
   padding: '1px',
   color: 'white',
-  textShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
+  textShadow: '5px 5px 5px rgba(0, 0, 0)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const explanationStyle = {
   fontSize: '50px',
   color: 'white',
-  textShadow: '2px 2px 5px rgba(0, 0, 0, 0.5)',
+  textShadow: '2px 2px 5px rgba(0, 0, 0)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const chartContainerStyle = {
@@ -75,15 +80,17 @@ const chartContainerStyle = {
   alignItems: 'center',
   border: '1px solid white',
   padding: '10px',
-  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+  textShadow: '4px 1px 3px rgba(0, 0, 0)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const tableStyle = {
   borderCollapse: 'collapse',
   width: '100%',
   textAlign: 'center',
-  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+  textShadow: '4px 1px 3px rgba(0, 0, 0)',
+  fontFamily: 'oceanName',
 };
 
 const thStyle = {
@@ -97,8 +104,9 @@ const tdStyle = {
   padding: '8px',
   textAlign: 'center',
   color: 'white',
-  textShadow: '4px 1px 3px rgba(0, 0, 0, 0.5)',
+  textShadow: '4px 1px 3px rgba(0, 0, 0)',
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 const formStyle = {
@@ -114,7 +122,8 @@ const formStyle = {
   border: 'none',
   borderRadius: '5px',
   letterSpacing: '1px',
-  boxShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
+  boxShadow: '1px 1px 3px rgba(0, 0, 0)',
+  fontFamily: 'oceanName',
   '&::placeholder': {
     color: 'red',
     
@@ -139,6 +148,7 @@ const submitButton = {
   marginLeft: '30px',
   letterSpacing: '1px',
   textShadow: '1px 1px 5px rgba(0, 0, 0, 0.5)',
+  fontFamily: 'oceanName',
 };
 
 const refreshButtonStyle = {
@@ -156,6 +166,7 @@ const refreshButtonStyle = {
   textShadow: '5px 5px 5px rgba(0, 0, 0,)',
   opacity: 0.8,
   letterSpacing: '1px',
+  fontFamily: 'oceanName',
 };
 
 
