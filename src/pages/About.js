@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import underwaterImage from '../images/animals-g69a63112c_1280.jpg';
+import '../fonts/fonts.css';
 
 
 const mainDiv = {

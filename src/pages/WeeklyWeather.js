@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../fonts/fonts.css';
 
 const WeeklyWeather = () => {
   const [location, setLocation] = useState('');

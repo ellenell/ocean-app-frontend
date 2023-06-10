@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import '../fonts/fonts.css';
 
 const DailyWeather = () => {
   const [location, setLocation] = useState('');

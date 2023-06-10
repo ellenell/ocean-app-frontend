@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import mainImage from '../images/pexels-josh-sorenson-63536.jpeg';
 
+import '../fonts/fonts.css';
 
 const mainDivStyle = {
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${mainImage})`,

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import backgroundImage from '../images/ivan-bandura-2FEE6BR343k-unsplash.jpg';
-
+import '../fonts/fonts.css';
 
 const Create = ({ createBlog }) => {
   const [newBlog, setNewBlog] = useState({

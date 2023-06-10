@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../fonts/fonts.css';
 
 
 const headerStyle = {
@@ -15,6 +16,7 @@ const headerStyle = {
   zIndex: 999,
   padding: '0 2rem',
   textShadow: '1px 1px 2px black',
+  fontFamily: 'oceanName',
 };
 
 const buttonStyle = {
@@ -28,6 +30,7 @@ const buttonStyle = {
   marginBottom: '10px',
   letterSpacing: '.5px',
   transition: 'transform 0.3s ease-in-out',
+  fontFamily: 'oceanName',
 };
 
 const hoverStyles = {

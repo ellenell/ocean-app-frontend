@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import '../fonts/fonts.css';
 
 const KayakingWeather = () => {
   const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const API_KEY = '03811f078e215996083861bf2f7eabf2';
+  
 
   const inputLocation = (event) => {
     setLocation(event.target.value);

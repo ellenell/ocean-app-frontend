@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import mainImage from '../images/ingrid-salmanca-Y6OKbIFe4Z0-unsplash.jpg';
 
+import '../fonts/fonts.css';
 
 const mainDivStyle = {
   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(${mainImage})`,

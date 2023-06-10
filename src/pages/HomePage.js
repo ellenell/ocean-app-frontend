@@ -40,7 +40,7 @@ function HomePage() {
     height: '100vh',
     padding: '20px',
     color: 'white',
-    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+    textShadow: '2px 2px 5px rgba(0, 0, 0)',
     fontFamily: 'oceanName',
   };
 
@@ -55,7 +55,7 @@ function HomePage() {
     textAlign: 'center',
     margin: '20px',
     transition: 'transform 0.3s',
-    textShadow: '1px 1px 5px rgba(255,255,255,)',
+    textShadow: '5px 5px 1px rgba(0, 0, 0)',
     letterSpacing: '1px',
     fontFamily: 'oceanName',
   };
@@ -65,6 +65,7 @@ function HomePage() {
     transform: 'scale(0.9)',
     opacity: 0.8,
     backgroundColor: 'rgba(0, 0, 0, 0.9)',
+    textShadow: '5px 5px 1px rgba(0, 0, 0)',
 
   };
 
@@ -73,7 +74,7 @@ function HomePage() {
     fontWeight: 'bold',
     marginBottom: '20px',
     color: 'white',
-    textShadow: '1px 1px 10px rgba(0, 0, 0, 0.5)' ,
+    textShadow: '2px 2px 3px rgba(0, 0, 0)' ,
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
@@ -84,7 +85,7 @@ function HomePage() {
   const pStyle = {
     fontSize: '30px',
     color: 'white',
-    textShadow: '1px 1px 10px rgba(0, 0, 0, 0.5)',
+    textShadow: '1px 1px 5px rgba(0, 0, 0)',
   };
 
   const handleMouseEnter = (buttonName) => {

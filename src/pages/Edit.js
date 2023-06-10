@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import backgroundImage from '../images/ivan-bandura-2FEE6BR343k-unsplash.jpg';
-
+import '../fonts/fonts.css';
 
 const inputStyle = {
   marginBottom: "10px",

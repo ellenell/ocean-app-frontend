@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import underwaterImage from '../images/ivan-bandura-2FEE6BR343k-unsplash.jpg';
 
+import '../fonts/fonts.css';
+
 const colorPrimary = '#05445E';
 const linkColor = '#D4F1F4'
 
@@ -16,6 +18,7 @@ const mainDiv = {
   justifyContent: 'center',
   flexDirection: 'column',
   padding: '5px',
+  fontFamily: 'oceanName',
   
 };
 

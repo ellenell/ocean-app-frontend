@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
+
 import backgroundImage from '../images/ivan-bandura-2FEE6BR343k-unsplash.jpg';
+
+import '../fonts/fonts.css';
 
 const colorPrimary = '#05445E';
 const linkColor = '#75E6DA';
