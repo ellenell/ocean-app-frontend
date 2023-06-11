@@ -13,6 +13,7 @@ const inputStyle = {
   border: "1px solid #ccc",
   textAlign: "left", 
   verticalAlign: "top", 
+  fontFamily: 'oceanName',
   
 };
 
@@ -24,6 +25,7 @@ const borderCreate = {
   border: '3px solid rgba(0, 0, 0)',
   backdropFilter: 'blur(5px)',
   backgroundColor: 'rgba(0, 0, 0, 0.3)',
+  fontFamily: 'oceanName',
 };
 
 const descriptionStyle = {
@@ -34,6 +36,7 @@ const descriptionStyle = {
   borderRadius: "3px",
   border: "1px solid #ccc",
   verticalAlign: "top", 
+  fontFamily: 'oceanName',
 };
 
 const selectStyle = {
@@ -45,6 +48,7 @@ const selectStyle = {
   border: "1px solid #ccc",
   backgroundColor: "#fff",
   verticalAlign: "top", 
+  fontFamily: 'oceanName',
 };
 
 const buttonStyle = {
@@ -60,6 +64,7 @@ const buttonStyle = {
   transition: 'transform 0.3s',
   textShadow: '1px 5px 5px rgba(0, 0, 0)',
   letterSpacing: '1.5px',
+  fontFamily: 'oceanName',
 };
 
 const h1Style = {
@@ -71,6 +76,7 @@ const h1Style = {
   textDecoration: 'none',
   textShadow: '1px 3px 5px rgba(0, 0, 0)',
   letterSpacing: '1.5px',
+  fontFamily: 'oceanName',
 }
 
 const mainDiv = {
@@ -84,6 +90,7 @@ const mainDiv = {
   flexDirection: 'column',
   // padding: '5px',
   color: 'white',
+  fontFamily: 'oceanName',
 };
 
 const Edit = () => {

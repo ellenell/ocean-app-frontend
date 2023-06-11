@@ -31,6 +31,7 @@ const AboutPage = () => {
     backdropFilter: 'blur(5px)',
     backgroundColor: 'rgba(0, 0, 0, 0.3)',
     textShadow: '1px 1px 5px rgba(0, 0, 0, 1)',
+    fontFamily: 'oceanName',
   };
 
   const headingStyle = {
@@ -38,12 +39,14 @@ const AboutPage = () => {
     fontWeight: "bold",
     marginBottom: "40px",
     marginTop: '50px',
+    fontFamily: 'oceanName',
   };
 
   const paragraphStyle = {
     fontSize: "18px",
     lineHeight: "1.5",
     marginBottom: "20px",
+    fontFamily: 'oceanName',
   };
 
   return (

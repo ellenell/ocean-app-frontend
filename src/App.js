@@ -16,8 +16,8 @@ import SnorkelWeather from './pages/SnorkelWeather.js'
 import SailingWeather from './pages/SailingWeather.js';
 
 // Import user pages
-import SignIn from './pages/User Pages/SignIn.js';
-import Register from './pages/User Pages/Register.js';
+import SignIn from './pages/SignIn.js';
+import Register from './pages/Register.js';
 import Index from "./pages/Index.js";
 import Create from "./pages/Create.js";
 import Show from "./pages/Show.js";
@@ -68,8 +68,8 @@ function App() {
           <Route path="/kayaking-weather" element={<KayakingWeather />} />
           <Route path="/snorkeling-weather" element={<SnorkelWeather />} />
           <Route path="/sailing-weather" element={<SailingWeather />} />
-          {/* <Route path="/signin" element={<SignIn />} />
-          <Route path="/register" element={<Register />} /> */}
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/blog-index" element={<Index blog={blog} createBlog={createBlog} />} />
           <Route path="/blog/create" element={<Create createBlog={createBlog} />} />
           <Route path="/blog/:id" element={<Show blog={blog} />} />

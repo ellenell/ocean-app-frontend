@@ -44,6 +44,7 @@ const Create = ({ createBlog }) => {
     border: "1px solid #ccc",
     textAlign: "left", 
     verticalAlign: "top", 
+    fontFamily: 'oceanName',
     
   };
 
@@ -65,6 +66,7 @@ const Create = ({ createBlog }) => {
     borderRadius: "3px",
     border: "1px solid #ccc",
     verticalAlign: "top", 
+    fontFamily: 'oceanName',
   };
 
   const selectStyle = {
@@ -76,6 +78,7 @@ const Create = ({ createBlog }) => {
     border: "1px solid #ccc",
     backgroundColor: "#fff",
     verticalAlign: "top", 
+    fontFamily: 'oceanName',
   };
 
   const buttonStyle = {
@@ -91,6 +94,7 @@ const Create = ({ createBlog }) => {
     transition: 'transform 0.3s',
     textShadow: '1px 5px 5px rgba(0, 0, 0)',
     letterSpacing: '1.5px',
+    fontFamily: 'oceanName',
   };
 
   const h1Style = {
@@ -102,6 +106,7 @@ const Create = ({ createBlog }) => {
     textDecoration: 'none',
     textShadow: '1px 3px 5px rgba(0, 0, 0)',
     letterSpacing: '1.5px',
+    fontFamily: 'oceanName',
   }
 
   const mainDiv = {
@@ -115,6 +120,7 @@ const Create = ({ createBlog }) => {
     flexDirection: 'column',
     // padding: '5px',
     color: 'white',
+    fontFamily: 'oceanName',
   };
 
   return (
