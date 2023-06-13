@@ -56,7 +56,7 @@ const buttonStyle = {
 };
 
 const decisionStyle = {
-  fontSize: '70px',
+  fontSize: '71px',
   fontWeight: 'bold',
   marginBottom: '.1px',
   padding: '1px',
