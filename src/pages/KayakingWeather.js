@@ -197,14 +197,18 @@ const KayakingWeather = () => {
       const data = await response.json();
       setWeatherData(data);
       setSubmitted(true);
+      console.log(data)
+      // console.log(weatherData)
     } catch (error) {
       console.error(error);
     }
+  
   };
 
   const handleRefresh = () => {
     window.location.reload();
   };
+
 
   let kayakingStatus = '';
   if (weatherData && weatherData.wind.speed > 20) {
@@ -221,7 +225,11 @@ const KayakingWeather = () => {
         <h3 style={explanationStyle}>It is safe to go kayaking today </h3>
       </>
     );
+
+    console.log(kayakingStatus)
   }
+
+console.log(weatherData)
 
     return (
       <div className="SailingWeather" style={mainDivStyle}>

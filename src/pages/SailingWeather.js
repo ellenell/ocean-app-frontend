@@ -235,6 +235,9 @@ const SailingWeather = () => {
     );
   }
 
+
+  console.log(weatherData)
+
     return (
       <div className="SailingWeather" style={mainDivStyle}>
       {weatherData ? (

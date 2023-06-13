@@ -218,7 +218,7 @@ const SnorkelWeather = () => {
   };
 
   let snorkelStatus = '';
-  if (weatherData && weatherData.wind.speed > 20) {
+  if (weatherData && weatherData.wind.speed > 5) {
     snorkelStatus = (
       <>
         <h2 style={decisionStyle}>NO</h2>
@@ -233,6 +233,9 @@ const SnorkelWeather = () => {
       </>
     );
   }
+
+
+  console.log(weatherData)
 
     return (
       <div className="SnorkelWeather" style={mainDivStyle}>

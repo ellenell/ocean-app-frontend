@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import video from '../images/waves.mp4';
+
 import '../fonts/fonts.css';
 
 function HomePage() {
