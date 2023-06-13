@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# SeaSense
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### A full React web app designed so users can check the ocean weather before they plan activities.
 
-## Available Scripts
+## Description
+My family is extremely active in the ocean. My parents love to kayak and my brother is an avid surfer. They have an app that they bought in the App Store that they use to check the weather to see if it is safe for them to go out into the ocean to kayak or surf. I wanted to re-create this app for them and tailer it specifically to sports we do as a family. The goal of this app is to display different wind data points for various activities such as surfing, kayaking, sailing and snorkeling so users can see if it is safe for them to go out into the ocean.  
 
-In the project directory, you can run:
+## Table of Contents
+* [Technologies Used](#technologiesused)
+* [Features](#features)
+* [Design](#design)
+* [User Stories](#userstories)
+* [Wire Frames](#wireframes)
+* [Project Next Steps](#nextsteps)
+* [Deployed App](#deployment)
+* [About the Author](#author)
 
-### `npm start`
+## <a name="technologiesused"></a>Technologies Used
+* JavaScript
+* HTML
+* CSS
+* React
+* Node.js
+* MongoDB
+* Express.js
+* Mongoose
+* RESTful Routes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+*   This is built with JavaScript, Node.js, Express.js, React
+*   The data is hosted on MongoDB
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## <a name="design"></a>Design
+* Design elements implemented using CSS
 
-### `npm test`
+## <a name="userstories"></a>User Stories
+* A user who is outdoorsy and active wants to check the tides and ocean weather for the day ahead
+* This user goes to the app and will see the information listed above noting wind speed, level of tides and if the conditions are good or bad
+* They will be able to see this daily or on a weekly level
+* This app will help them plan their day
+* After their surf or kayak they can then log their activity so they can remember it for the future
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## <a name="wireframes"></a>Wire Frames
+![image](https://github.com/ellenell/ocean-app-frontend/assets/93359833/8167b3f4-bad3-45f6-90ab-aeb98b3ae7e3)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://github.com/ellenell/ocean-app-frontend/assets/93359833/3104a5c4-3082-42f2-bb5c-22814bca7e2e)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://github.com/ellenell/ocean-app-frontend/assets/93359833/f3404d5a-cccd-4eb4-bbb5-7180752b8d14)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://github.com/ellenell/ocean-app-frontend/assets/93359833/a69a05c6-bee0-4903-8dde-72cea5a1cc18)
 
-### `npm run eject`
+![image](https://github.com/ellenell/ocean-app-frontend/assets/93359833/fdd63704-c1d0-42b6-af38-7a6cf5cc7771)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## <a name="nextsteps"></a>Project Next Steps
+* Adding the ability for users to sign in or register to their pages 
+* Adding in specific information about the tides
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## <a name="deployment"></a>Deployed Link
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Deployed frontend: 
+Deployed backend: 
+    
