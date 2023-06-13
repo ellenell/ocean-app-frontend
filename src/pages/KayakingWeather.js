@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import mainImage from '../images/pexels-pixabay-355288.jpg';
+import mainImage from '../images/kayak.jpg';
 import '../fonts/fonts.css';
 
 const mainDivStyle = {

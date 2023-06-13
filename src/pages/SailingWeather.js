@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import mainImage from '../images/ingrid-salmanca-Y6OKbIFe4Z0-unsplash.jpg';
+import mainImage from '../images/sailing.jpg';
 
 import '../fonts/fonts.css';
 
