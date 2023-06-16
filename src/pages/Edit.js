@@ -106,7 +106,7 @@ const Edit = () => {
 
   useEffect(() => {
     // Fetch the existing blog post data from the backend API
-    fetch(`http://localhost:4000/blog/edit/${id}`)
+    fetch(`https://sea-sense.herokuapp.com/edit/${id}`)
       .then(response => response.json())
       .then(data => {
         setFormData(data);

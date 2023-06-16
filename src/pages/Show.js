@@ -114,7 +114,7 @@ const Show = (props) => {
 
   const handleDelete = () => {
     // trying to send a DELETE request to your backend API
-    fetch(`http://localhost:4000/blog/${blogs._id}`, {
+    fetch(`https://sea-sense.herokuapp.com/blog/${blogs._id}`, {
       method: 'DELETE'
     })
       .then((response) => response.json())
