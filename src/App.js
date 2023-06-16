@@ -26,7 +26,7 @@ import Edit from "./pages/Edit.js"
 import About from "./pages/About.js"
 
 function App() {
-  const URL = `http://localhost:4000/`
+  const URL = `https://sea-sense.herokuapp.com/`
 
   const [blog, setBlog] = useState(null);
 
